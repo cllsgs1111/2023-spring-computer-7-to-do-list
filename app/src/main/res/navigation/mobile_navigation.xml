@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_oneday">
+
+
+    <fragment
+        android:id="@+id/navigation_oneday"
+        android:name="com.example.notes.activities.MainFragment"
+        android:label="@string/title_oneday"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/navigation_overview"
+        android:name="com.example.todomanagement.ui.overview.OverviewFragment"
+        android:label="@string/title_overview"
+        tools:layout="@layout/fragment_overview">
+        <action
+            android:id="@+id/action_navigation_all_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_navigation_all_to_modifyFragment"
+            app:destination="@id/modifyFragment" />
+        <argument
+            android:name="categoryId"
+            app:argType="long" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_tasklist"
+        android:name="com.androidcourse.coursetable.CourseFragment"
+        android:label="@string/title_tasklist"
+        tools:layout="@layout/fragment_tasklist">
+        <action
+            android:id="@+id/action_navigation_tasklist_to_navigation_overview"
+            app:destination="@id/navigation_overview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tasklist2"
+        android:name="com.example.todomanagement.ui.tasklist.TaskListFragment"
+        android:label="@string/title_tasklist"
+        tools:layout="@layout/fragment_tasklist">
+        <action
+            android:id="@+id/action_navigation_tasklist_to_navigation_overview"
+            app:destination="@id/navigation_overview" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.todomanagement.ui.add.AddFragment"
+        android:label="AddFragment">
+        <action
+            android:id="@+id/action_addFragment_to_navigation_all"
+            app:destination="@id/navigation_overview" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyFragment"
+        android:name="com.example.todomanagement.ui.modify.ModifyFragment"
+        android:label="ModifyFragment">
+        <action
+            android:id="@+id/action_modifyFragment_to_navigation_all"
+            app:destination="@id/navigation_overview" />
+        <argument
+            android:name="taskId"
+            app:argType="string" />
+    </fragment>
+</navigation>

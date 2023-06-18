@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_oneday"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_oneday" />
+
+
+    <item
+        android:id="@+id/navigation_overview"
+        android:icon="@drawable/ic_list"
+        android:title="@string/title_overview" />
+
+
+    <item
+        android:id="@+id/navigation_tasklist"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_tasklist" />
+
+</menu>

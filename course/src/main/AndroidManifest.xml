@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kcb">
+
+    <application
+        android:label="课程表"
+        >
+        <activity android:name="com.androidcourse.coursetable.SeeCourseActivity"
+            android:label="查看课程"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+
+        <activity
+            android:name="com.androidcourse.coursetable.AddCourseActivity"
+            android:label="添加课程"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+    </application>
+
+</manifest>
